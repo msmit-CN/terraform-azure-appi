@@ -1,5 +1,5 @@
 resource "azurerm_application_insights" "appi" {
-  name                                  = var.config.name
+  name                                  = try(var.config.name, join("", [var.naming.application_insights, each.key]))
   location                              = coalesce(lookup(var.config, "location", null), var.location)
   resource_group_name                   = coalesce(lookup(var.config, "resource_group", null), var.resource_group)
   application_type                      = var.config.application_type
@@ -13,7 +13,7 @@ resource "azurerm_application_insights" "appi" {
   internet_ingestion_enabled            = try(var.config.internet_ingestion_enabled, true)
   internet_query_enabled                = try(var.config.internet_query_enabled, true)
   force_customer_storage_for_profiler   = try(var.config.force_customer_storage_for_profiler, false)
-  tags                                  = try(var.config.tags, {})
+  tags                                  = try(var.config.tags, var.tags, {})
 }
 
 resource "azurerm_application_insights_analytics_item" "analytics_item" {
@@ -66,7 +66,7 @@ resource "azurerm_application_insights_standard_web_test" "swt" {
   enabled                 = try(each.value.enabled, null)
   frequency               = try(each.value.frequency, 300)
   retry_enabled           = try(each.value.retry_enabled, null)
-  tags                    = try(var.config.tags, {})
+  tags                    = try(var.config.tags, var.tags, {})
   timeout                 = try(each.value.timeout, 30)
 
   dynamic "request" {
@@ -124,5 +124,5 @@ resource "azurerm_application_insights_web_test" "wt" {
   enabled                 = try(each.value.enabled, null)
   retry_enabled           = try(each.value.retry_enabled, null)
   description             = try(each.value.description, null)
-  tags                    = try(var.config.tags, {})
+  tags                    = try(var.config.tags, var.tags, {})
 }
