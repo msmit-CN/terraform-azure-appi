@@ -1,5 +1,5 @@
 resource "azurerm_application_insights" "appi" {
-  name                                  = try(var.config.name, join("", [var.naming.application_insights, each.key]))
+  name                                  = try(var.config.name, var.naming.application_insights)
   location                              = coalesce(lookup(var.config, "location", null), var.location)
   resource_group_name                   = coalesce(lookup(var.config, "resource_group", null), var.resource_group)
   application_type                      = var.config.application_type
