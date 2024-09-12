@@ -29,7 +29,7 @@ module "analytics" {
 }
 
 module "appi" {
-  source = "cloudnationhq/appi/azure"
+  source  = "cloudnationhq/appi/azure"
   version = "~> 1.0"
 
   config = {
@@ -58,8 +58,8 @@ module "appi" {
 
     smart_detection_rules = {
       sdr1 = {
-        name                          = "Slow server response time"
-        enabled                       = true
+        name                               = "Slow server response time"
+        enabled                            = true
         send_emails_to_subscription_owners = false
       }
     }
@@ -83,7 +83,7 @@ module "appi" {
         name          = "wt1"
         geo_locations = ["emea-nl-ams-azr"]
         description   = "Web Test"
-        kind = "ping"
+        kind          = "ping"
         configuration = <<XML
 <WebTest Name="WebTest1" Id="ABD48585-0831-40CB-9069-682EA6BB3583" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="" ResultsLocale="">
   <Items>

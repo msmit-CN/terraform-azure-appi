@@ -18,7 +18,7 @@ module "rg" {
 }
 
 module "appi" {
-  source = "cloudnationhq/appi/azure"
+  source  = "cloudnationhq/appi/azure"
   version = "~> 1.0"
 
   config = {
