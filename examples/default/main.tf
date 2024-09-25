@@ -7,7 +7,7 @@ module "naming" {
 
 module "rg" {
   source  = "cloudnationhq/rg/azure"
-  version = "~> 1.0"
+  version = "~> 2.0"
 
   groups = {
     demo = {
@@ -19,7 +19,7 @@ module "rg" {
 
 module "appi" {
   source  = "cloudnationhq/appi/azure"
-  version = "~> 1.0"
+  version = "~> 2.0"
 
   config = {
     name             = module.naming.application_insights.name
