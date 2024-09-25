@@ -5,11 +5,15 @@
 
 ### ⚠ BREAKING CHANGES
 
-* * Version 4 of the azurerm provider includes breaking changes.
+* Version 4 of the azurerm provider includes breaking changes.
 
 ### Features
 
 * upgrade azurerm provider to v4 ([3987c09](https://github.com/CloudNationHQ/terraform-azure-appi/commit/3987c0967d4f6285a20a4ee2dbfb505b601fca90))
+
+### Upgrade from v1.0.0 to v2.0.0:
+
+- Update module reference to: `version = "~> 2.0"`
 
 ## 1.0.0 (2024-09-12)
 
