@@ -6,9 +6,7 @@
 ### Features
 
 * auto generated docs and refine makefile ([8bd5aa1](https://github.com/CloudNationHQ/terraform-azure-appi/commit/8bd5aa14f5fce38db410dc466146b76a12cd2862))
-* auto generated docs and refine makefile ([5e6efc9](https://github.com/CloudNationHQ/terraform-azure-appi/commit/5e6efc9ebf16c355fb88cbcab557094fe4006a91))
 * **deps:** bump github.com/gruntwork-io/terratest from 0.47.1 to 0.47.2 in /tests ([abe6fca](https://github.com/CloudNationHQ/terraform-azure-appi/commit/abe6fcae998e3866be1a4bf5fabe10eb5f6cba48))
-* **deps:** bump github.com/gruntwork-io/terratest in /tests ([0f5ca3c](https://github.com/CloudNationHQ/terraform-azure-appi/commit/0f5ca3c2d7c2e46951a977d806bade224fcfe74d))
 
 ## [2.0.0](https://github.com/CloudNationHQ/terraform-azure-appi/compare/v1.0.0...v2.0.0) (2024-09-25)
 
