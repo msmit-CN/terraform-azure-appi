@@ -28,46 +28,48 @@ End-to-end testing is not conducted on these modules, as they are individual com
 - Add analytics items, api keys, smart detection rules, standard web tests and web tests
 - Export instrumentation key to be used by other modules
 
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.9.3 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.116 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 4.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 3.116 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 4.0 |
 
 ## Resources
 
 | Name | Type |
-| :-- | :-- |
-| [azurerm_application_insights](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/azurerm_application_insights) | resource |
-| [azurerm_application_insights_analytics_item](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/azurerm_application_insights_analytics_item) | resource |
-| [azurerm_application_insights_api_key](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/azurerm_application_insights_api_key) | resource |
-| [azurerm_application_insights_smart_detection_rule](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/azurerm_application_insights_api_key) | resource |
-| [azurerm_application_insights_standard_web_test](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/azurerm_application_insights_standard_web_test) | resource |
-| [azurerm_application_insights_web_test](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/azurerm_application_insights_web_test) | resource |
+|------|------|
+| [azurerm_application_insights.appi](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_insights) | resource |
+| [azurerm_application_insights_analytics_item.analytics_item](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_insights_analytics_item) | resource |
+| [azurerm_application_insights_api_key.api_key](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_insights_api_key) | resource |
+| [azurerm_application_insights_smart_detection_rule.sdr](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_insights_smart_detection_rule) | resource |
+| [azurerm_application_insights_standard_web_test.swt](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_insights_standard_web_test) | resource |
+| [azurerm_application_insights_web_test.wt](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_insights_web_test) | resource |
 
 ## Inputs
 
-| Name | Description | Type | Required |
-| :-- | :-- | :-- | :-- |
-| `config` | describes application insights related configuration | object | yes |
-| `naming` | contains naming convention  | string | yes |
-| `location` | default azure region to be used  | string | yes |
-| `resource_group` | default resource group to be used | string | yes |
-| `tags` | optional tags to add to application insights resources | string | no |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_config"></a> [config](#input\_config) | describes the application insights configuration | `any` | n/a | yes |
+| <a name="input_location"></a> [location](#input\_location) | default azure region to be used. | `string` | `null` | no |
+| <a name="input_naming"></a> [naming](#input\_naming) | contains naming convention | `map(string)` | `{}` | no |
+| <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | default resource group to be used. | `string` | `null` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | tags to be added to the resources | `map(string)` | `{}` | no |
 
 ## Outputs
 
 | Name | Description |
-| :-- | :-- |
-| `config` | contains all application insights configuration |
-| `api_keys` | contains access policy configuration |
+|------|-------------|
+| <a name="output_api_keys"></a> [api\_keys](#output\_api\_keys) | api keys for applications insights |
+| <a name="output_config"></a> [config](#output\_config) | configuration for applications insights |
+<!-- END_TF_DOCS -->
 
 ## Testing
 
