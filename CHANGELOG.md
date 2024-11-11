@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.2.0](https://github.com/CloudNationHQ/terraform-azure-appi/compare/v2.1.0...v2.2.0) (2024-11-11)
+
+
+### Features
+
+* enhance testing with sequential, parallel modes and flags for exceptions and skip-destroy ([121c827](https://github.com/CloudNationHQ/terraform-azure-appi/commit/121c8272ee6b4b6ad233a31013050961d758352a))
+* enhance testing with sequential, parallel modes and flags for exceptions and skip-destroy ([07d6530](https://github.com/CloudNationHQ/terraform-azure-appi/commit/07d6530029c6b003e7a11df53d7f14abbf6a7a3f))
+
 ## [2.1.0](https://github.com/CloudNationHQ/terraform-azure-appi/compare/v2.0.0...v2.1.0) (2024-10-11)
 
 
