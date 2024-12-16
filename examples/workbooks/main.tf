@@ -1,6 +1,6 @@
 module "naming" {
   source  = "cloudnationhq/naming/azure"
-  version = "~> 0.13"
+  version = "~> 0.22"
 
   suffix = ["demo", "dev"]
 }
