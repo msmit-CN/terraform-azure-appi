@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/CloudNationHQ/terraform-azure-appi/compare/v2.3.0...v2.4.0) (2024-12-16)
+
+
+### Features
+
+* add usages and type definitions for workbooks, workbook templates, api keys, smart detection rules, web tests and analytic items ([#14](https://github.com/CloudNationHQ/terraform-azure-appi/issues/14)) ([8e77933](https://github.com/CloudNationHQ/terraform-azure-appi/commit/8e77933cce309bb8b20ca150cc468e8dbd834cf3))
+
 ## [2.3.0](https://github.com/CloudNationHQ/terraform-azure-appi/compare/v2.2.0...v2.3.0) (2024-12-16)
 
 
