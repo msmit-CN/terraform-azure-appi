@@ -1,6 +1,6 @@
 # Application Insights
 
-This Terraform module simplifies the setup and management of Azure Application Insights, offering customizable configurations for creating and maintaining application insights instances. Application Insights collects telemetry about your app, including web server telemetry, web page telemetry, and performance counters. This data can be used to monitor your app's performance, health, and usage.
+This Terraform module streamlines the creation and management of azure application insights. It collects telemetry such as server metrics, web page data, and performance counters, enabling you to monitor application performance, health, and usage effectively.
 
 ## Goals
 
